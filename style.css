@@ -250,6 +250,8 @@ body {
 .filters_wrap_mobile {
   display: none;
 }
+.filters {
+}
 
 @media only screen and (max-width: 500px) {
   .filters_wrap_mobile {

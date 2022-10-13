@@ -12,6 +12,8 @@ const activeBtn = document.querySelectorAll(".activeFilter");
 const allBtn = document.querySelectorAll(".all");
 const todoGuide = document.querySelector(".todo_quide");
 const filtersMobile = document.querySelector(".filters_wrap_mobile");
+const filters = document.querySelectorAll(".filters");
+const filter = document.querySelectorAll(".filter");
 
 // FUNCTIONALITY
 
@@ -140,6 +142,18 @@ const addToDo = function (e) {
 };
 
 input.addEventListener("keypress", addToDo);
+
+filters.forEach((el) =>
+  el.addEventListener("click", function (e) {
+    const clicked = e.target.closest(".filter");
+
+    if (!clicked) return;
+
+    filter.forEach((btn) => btn.classList.remove("activeBtn"));
+
+    clicked.classList.add("activeBtn");
+  })
+);
 
 // clear all btn
 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>TodoApp | Your daily remainder</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <template id="content">
+      <li class="todo_list--item draggable" draggable="true">
+        <div class="text_wrap">
+          <img src="./images/icon-check.svg" alt="" class="check" />
+          <p class="list_item--text"></p>
+        </div>
+        <img src="./images/icon-cross.svg" alt="" class="cross" />
+      </li>
+    </template>
+    <div class="img_wrap"></div>
+    <section id="todo_wrap">
+      <div class="heading">
+        <h1 class="logo">Todo</h1>
+        <img src="./images/icon-moon.svg" alt="" class="theme_toggle" />
+      </div>
+      <div class="input_wrap">
+        <input
+          type="text"
+          name="todos"
+          id="input"
+          placeholder="Create a new todo.."
+        />
+      </div>
+      <div class="todo_content">
+        <ul class="todo_list" id="todoList"></ul>
+        <div class="todo_footer">
+          <div class="counter_wrap"><span id="counter"></span> items left</div>
+          <div class="filters_wrap">
+            <span class="filter all" id="all">All</span>
+            <span class="filter activeFilter" id="active">Active</span>
+            <span class="filter completed" id="completed">Completed</span>
+          </div>
+          <span id="clear">Clear All</span>
+        </div>
+      </div>
+      <div class="filters_wrap_mobile">
+        <span class="filter all" id="all">All</span>
+        <span class="filter activeFilter" id="activeFilter">Active</span>
+        <span class="filter completedFilter" id="completed">Completed</span>
+      </div>
+      <div class="todo_quide">Drag and drop to reorder list</div>
+    </section>
+  </body>
+</html>

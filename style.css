@@ -59,6 +59,7 @@ body {
   background-image: url(./images/bg-desktop-light.jpg);
   background-position: top;
   background-size: cover;
+  bacground-repeat: no-repeat;
 }
 #todo_wrap {
   width: 50vw;
